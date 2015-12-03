@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8aea4a1ba16142c40a43bc2416b1153b
-timeCreated: 1445786020
+timeCreated: 1449000942
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,8 +8,8 @@ TextureImporter:
     21300002: tiles_1
     21300004: tiles_2
     21300006: tiles_3
-    21300008: tiles_4
-    21300010: tiles_5
+    21300008: brick_01
+    21300010: brick_02
     21300012: tiles_6
     21300014: tiles_7
     21300016: tiles_8
@@ -423,9 +423,9 @@ TextureImporter:
     21300832: tiles_416
     21300834: tiles_417
     21300836: tiles_418
-    21300838: tiles_419
-    21300840: tiles_420
-    21300842: tiles_421
+    21300838: Stone_Left
+    21300840: Stone_Middle
+    21300842: Stone_Right
     21300844: tiles_422
     21300846: tiles_423
     21300848: tiles_424
@@ -448,9 +448,9 @@ TextureImporter:
     21300882: tiles_441
     21300884: tiles_442
     21300886: tiles_443
-    21300888: tiles_444
-    21300890: tiles_445
-    21300892: tiles_446
+    21300888: Stone_Lower_left
+    21300890: Stone_loewer_middle
+    21300892: Stone_lower_right
     21300894: tiles_447
     21300896: tiles_448
     21300898: tiles_449
@@ -496,8 +496,8 @@ TextureImporter:
     21300978: tiles_489
     21300980: tiles_490
     21300982: tiles_491
-    21300984: tiles_492
-    21300986: tiles_493
+    21300984: flower_01
+    21300986: flower_02
     21300988: tiles_494
     21300990: tiles_495
     21300992: tiles_496
@@ -954,7 +954,7 @@ TextureImporter:
   textureFormat: -2
   maxTextureSize: 2048
   textureSettings:
-    filterMode: 0
+    filterMode: 1
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -1015,7 +1015,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_4
+    - name: brick_01
       rect:
         serializedVersion: 2
         x: 69
@@ -1025,7 +1025,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_5
+    - name: brick_02
       rect:
         serializedVersion: 2
         x: 86
@@ -5165,7 +5165,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_419
+    - name: Stone_Left
       rect:
         serializedVersion: 2
         x: 324
@@ -5175,7 +5175,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_420
+    - name: Stone_Middle
       rect:
         serializedVersion: 2
         x: 341
@@ -5185,7 +5185,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_421
+    - name: Stone_Right
       rect:
         serializedVersion: 2
         x: 358
@@ -5415,7 +5415,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_444
+    - name: Stone_Lower_left
       rect:
         serializedVersion: 2
         x: 324
@@ -5425,7 +5425,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_445
+    - name: Stone_loewer_middle
       rect:
         serializedVersion: 2
         x: 341
@@ -5435,7 +5435,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_446
+    - name: Stone_lower_right
       rect:
         serializedVersion: 2
         x: 358
@@ -5895,7 +5895,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_492
+    - name: flower_01
       rect:
         serializedVersion: 2
         x: 290
@@ -5905,7 +5905,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_493
+    - name: flower_02
       rect:
         serializedVersion: 2
         x: 307

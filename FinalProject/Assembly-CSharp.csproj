@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\DeathTrigger.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\EnemyController1.cs" />
+     <Compile Include="Assets\Scripts\ExitPointController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GameOverController.cs" />
      <Compile Include="Assets\Scripts\MenuController.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets\Scripts\SimplePlatformController.cs" />
      <Compile Include="Assets\Scripts\SpawnCoins.cs" />
      <Compile Include="Assets\Scripts\SpawnManager.cs" />
+     <Compile Include="Assets\Scripts\SpawnPointController.cs" />
      <None Include="Assets\Fonts\kirbynokirakizzu.txt" />
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>

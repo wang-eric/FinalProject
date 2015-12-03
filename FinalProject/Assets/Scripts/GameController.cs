@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 public class GameController : MonoBehaviour {
 
@@ -16,7 +17,7 @@ public class GameController : MonoBehaviour {
 	//private bool restart;
 	private int score;
 	private int life;
-	private int time;
+	private float time;
 
 	private Vector3 spawnPoint;
 	public bool respawn;
@@ -36,16 +37,15 @@ public class GameController : MonoBehaviour {
 		UpdateLife();
 		UpdateTime ();
 	}
+
+	void Update(){
+		UpdateTime ();
+	}
 	
 	public void AddScore (int newScoreValue)
 	{
 		score += newScoreValue;
 		UpdateScore ();
-	}
-	public void CountDown ()
-	{
-		time -= 1;
-		UpdateTime ();
 	}
 	
 	void UpdateScore()
@@ -61,7 +61,7 @@ public class GameController : MonoBehaviour {
 		return life;
 	}
 
-	public int GetTime()
+	public double GetTime()
 	{
 		return time;
 	}
@@ -87,7 +87,14 @@ public class GameController : MonoBehaviour {
 	}
 	void UpdateTime()
 	{
-		timerText.text = "Time: " + time;
+		time -= Time.deltaTime;
+
+		if (time <= 0) {
+			timerText.text = "Time: 0";
+			Time.timeScale = 0;
+		} else {
+			timerText.text = "Time: " + time.ToString("0");
+		}
 	}
 
 	void UpdateLife()

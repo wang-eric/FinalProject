@@ -29,11 +29,17 @@ public class EnemyController : MonoBehaviour {
 	private bool hittingPlayerFront,hittingPlayerBack;
 	private bool hittingPlayerTop;
 	private bool enemyKilled = false;
+	private AudioSource[] _audioSources;
+	private AudioSource _zombieKillSound;
+	private AudioSource _zombieBiteSound;
 
 	private GameController gameController;
-
+	
 	// Use this for initialization
 	void Start () {
+		this._audioSources = gameObject.GetComponents<AudioSource> ();
+		this._zombieKillSound = this._audioSources[0];
+		this._zombieBiteSound = this._audioSources[1];
 		GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
 		if (gameControllerObject != null) {
 			gameController = gameControllerObject.GetComponent <GameController>();
@@ -67,6 +73,8 @@ public class EnemyController : MonoBehaviour {
 
 			// Player get killed when hit by a zombie
 			if (hittingPlayerFront || hittingPlayerBack){
+				
+				_zombieBiteSound.Play ();
 				gameController.RemoveLife();
 				if (gameController.GetLife() == 0) {
 					//Destroy(other.gameObject);
@@ -76,12 +84,17 @@ public class EnemyController : MonoBehaviour {
 				{
 					gameController.RespawnTrigger();
 				}
+				/*
+				_zombieBiteSound.Play ();
+
+				*/
+
 			}
 		}
 
 		// Kill zombies when the player jump on their heads
 		if (hittingPlayerTop) {
-			GetComponent<AudioSource> ().Play ();
+			_zombieKillSound.Play ();
 			//this.gameObject.GetComponent<Renderer> ().enabled = false;
 			gameObject.GetComponent<CircleCollider2D> ().enabled = false;
 			gameController.AddScore(50);
@@ -99,4 +112,5 @@ public class EnemyController : MonoBehaviour {
 			this._rigidbody2D.velocity = new Vector2 (-speed, this._rigidbody2D.velocity.y);
 		}
 	}
+
 }

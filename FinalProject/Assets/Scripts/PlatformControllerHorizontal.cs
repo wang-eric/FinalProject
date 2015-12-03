@@ -5,7 +5,8 @@ public class PlatformControllerHorizontal : MonoBehaviour {
 	// PUBLIC INSTANCE VARIABLES
 	public float speed = 0.1f;
 	public bool moveRight = true;
-
+	private Transform _playerTransform;
+	private SimplePlatformController _playerController;
 	// PRIVATE INSTANCE VARIABLES
 	private Transform _transform;
 	
