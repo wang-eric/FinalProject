@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8aea4a1ba16142c40a43bc2416b1153b
-timeCreated: 1449000942
+timeCreated: 1449191734
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -59,7 +59,7 @@ TextureImporter:
     21300104: tiles_52
     21300106: tiles_53
     21300108: tiles_54
-    21300110: tiles_55
+    21300110: brick_blue_01
     21300112: tiles_56
     21300114: tiles_57
     21300116: tiles_58
@@ -1525,7 +1525,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_55
+    - name: brick_blue_01
       rect:
         serializedVersion: 2
         x: 86
