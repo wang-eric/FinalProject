@@ -1,8 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="F:\FinalProject\Assets\Scripts\EnemyController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\InstructionController.cs">
     <Files>
-      <File FileName="F:\FinalProject\Assets\Scripts\EnemyController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MenuController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameOverController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\WinLevel1Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\WinLevel2Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\WinLevel3Controller.cs" Line="25" Column="33" />
+      <File FileName="Assets\Scripts\InstructionController.cs" Line="4" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

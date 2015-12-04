@@ -22,6 +22,6 @@ public class GameOverController : MonoBehaviour {
 
 	// Restart Button Event Handler
 	public void OnRestartButtonClick() {
-		Application.LoadLevel ("Main");
+		Application.LoadLevel ("Level1");
 	}
 }

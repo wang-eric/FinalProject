@@ -17,6 +17,6 @@ public class MenuController : MonoBehaviour {
 
 	// Start Button Event Handler
 	public void OnStartButtonClick() {
-		Application.LoadLevel ("Main");
+		Application.LoadLevel ("Level1");
 	}
 }
