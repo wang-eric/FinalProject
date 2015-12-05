@@ -72,7 +72,19 @@ public class EnemyController : MonoBehaviour {
 			}
 
 			// Player get killed when hit by a zombie
-			if (hittingPlayerFront || hittingPlayerBack){
+			// Kill zombies when the player jump on their heads
+			if (hittingPlayerTop) {
+				_zombieKillSound.Play ();
+				//this.gameObject.GetComponent<Renderer> ().enabled = false;
+				//gameObject.GetComponent<CircleCollider2D> ().enabled = false;
+				gameObject.GetComponent<BoxCollider2D> ().enabled = false;
+				gameObject.GetComponent<CircleCollider2D> ().enabled = false;
+				gameController.AddScore(50);
+				Destroy (gameObject, 1f);
+				hittingPlayerTop=false;
+				enemyKilled = true;
+				//Destroy (this.gameObject);
+			}else if (hittingPlayerFront || hittingPlayerBack){
 				
 				_zombieBiteSound.Play ();
 				gameController.RemoveLife();
@@ -92,17 +104,7 @@ public class EnemyController : MonoBehaviour {
 			}
 		}
 
-		// Kill zombies when the player jump on their heads
-		if (hittingPlayerTop) {
-			_zombieKillSound.Play ();
-			//this.gameObject.GetComponent<Renderer> ().enabled = false;
-			gameObject.GetComponent<CircleCollider2D> ().enabled = false;
-			gameController.AddScore(50);
-			Destroy (gameObject, 1f);
-			hittingPlayerTop=false;
-			enemyKilled = true;
-			//Destroy (this.gameObject);
-		}
+
 
 		if (moveRight) {
 			this._transform.localScale = new Vector3(-2.8f, 2.8f, 1f); 

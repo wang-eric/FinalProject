@@ -16,6 +16,7 @@ TagManager:
   - Coin
   - PlatformMoveHorizontal
   - BackgroundImage
+  - ZombieHead
   layers:
   - Default
   - TransparentFX

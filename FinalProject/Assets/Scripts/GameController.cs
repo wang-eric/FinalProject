@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour {
 		respawn = false;
 		score = 0;
 		life = 5;
-		time = 200;
+		time = 5;
 		spawnPoint = new Vector3 (0.1f,-1.71f,-2f);
 		UpdateScore ();
 		UpdateLife();
@@ -87,14 +87,13 @@ public class GameController : MonoBehaviour {
 	}
 	void UpdateTime()
 	{
-		time -= Time.deltaTime;
-
 		if (time <= 0) {
-			timerText.text = "Time: 0";
-			Time.timeScale = 0;
+			time = 0;
+			//Time.timeScale = 0;
 		} else {
-			timerText.text = "Time: " + time.ToString("0");
+			time -= Time.deltaTime;
 		}
+		timerText.text = "Time: " + time.ToString("0");
 	}
 
 	void UpdateLife()
@@ -112,7 +111,7 @@ public class GameController : MonoBehaviour {
 	// Load Win scene
 	public void Win()
 	{
-		Application.LoadLevel ("Win");
+		Application.LoadLevel ("Win1");
 		win = true;
 	}
 }

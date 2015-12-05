@@ -19,4 +19,9 @@ public class MenuController : MonoBehaviour {
 	public void OnStartButtonClick() {
 		Application.LoadLevel ("Level1");
 	}
+
+	// Instruction Button Event Handler
+	public void OnInstructionButtonClick() {
+		Application.LoadLevel ("Instruction");
+	}
 }
