@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b9a1151ef4761f943b7baf697c9fc9ba
-timeCreated: 1449369443
+timeCreated: 1449386151
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,6 +15,11 @@ TextureImporter:
     21300016: fire04
     21300018: dragon_fire2
     21300020: dragon_fire3
+    21300022: fire__7
+    21300024: fire__9
+    21300026: fire__8
+    21300028: fire__3
+    21300030: fire__5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 1
@@ -170,6 +175,56 @@ TextureImporter:
         height: 93
       alignment: 9
       pivot: {x: .5, y: .51267457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire__7
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 92
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire__9
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 98
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire__8
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 97
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire__3
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 55
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire__5
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 55
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

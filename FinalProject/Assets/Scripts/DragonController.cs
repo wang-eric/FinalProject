@@ -5,13 +5,18 @@ public class DragonController : MonoBehaviour {
 	// PUBLIC INSTANCE VARIABLES
 	public float speed = 0.01f;
 	public bool fire = false;
+	public int Range = 300;
+
+	public GameObject fireball;
+	public Transform fireSpawn;
+
 	private Transform _playerTransform;
 	private SimplePlatformController _playerController;
 	private Animator anim;
 	// PRIVATE INSTANCE VARIABLES
 	private Transform _transform;
 	
-	public int Range = 20;
+
 	private int counter = 0;
 	// Use this for initialization
 	void Start () {
@@ -22,15 +27,20 @@ public class DragonController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (counter == Range){
+		if (counter >= Range && counter < Range+100) {
 			this.anim.SetBool ("fire", true);
-			speed=0;
-			counter = 0;
-		} else {
+			if (counter== Range+65){
+				Instantiate (fireball, fireSpawn.position, fireSpawn.rotation);
+				//GetComponet<AudioSource>.Play();
+			}
+
+		} else if (counter == Range + 100) {
 			this.anim.SetBool ("fire", false);
-			speed = 0.01f;
+			counter = 0;
+			this._transform.position += new Vector3(speed,0,0);
+		} else {
+			this._transform.position += new Vector3(speed,0,0);
 		}
-		this._transform.position += new Vector3(speed,0,0);
 		counter += 1;
 	}
 }
