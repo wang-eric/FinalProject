@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8aea4a1ba16142c40a43bc2416b1153b
-timeCreated: 1449360108
+timeCreated: 1449422575
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -219,7 +219,7 @@ TextureImporter:
     21300424: tiles_212
     21300426: tiles_213
     21300428: tiles_214
-    21300430: tiles_215
+    21300430: lava_06
     21300432: tiles_216
     21300434: tiles_217
     21300436: tiles_218
@@ -316,9 +316,9 @@ TextureImporter:
     21300618: tiles_309
     21300620: tiles_310
     21300622: tiles_311
-    21300624: tiles_312
-    21300626: tiles_313
-    21300628: tiles_314
+    21300624: l3_platform_left
+    21300626: l3_platform_middle
+    21300628: l3_platform_right
     21300630: tiles_315
     21300632: tiles_316
     21300634: tiles_317
@@ -3125,13 +3125,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_215
+    - name: lava_06
       rect:
         serializedVersion: 2
-        x: 256
-        y: 476
-        width: 16
-        height: 16
+        x: 257
+        y: 477
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4095,7 +4095,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_312
+    - name: l3_platform_left
       rect:
         serializedVersion: 2
         x: 205
@@ -4105,7 +4105,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_313
+    - name: l3_platform_middle
       rect:
         serializedVersion: 2
         x: 222
@@ -4115,7 +4115,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_314
+    - name: l3_platform_right
       rect:
         serializedVersion: 2
         x: 239

@@ -5,7 +5,7 @@ public class DragonController : MonoBehaviour {
 	// PUBLIC INSTANCE VARIABLES
 	public float speed = 0.01f;
 	public bool fire = false;
-	public int Range = 300;
+	public float Range = 300;
 
 	public GameObject fireball;
 	public Transform fireSpawn;
@@ -29,7 +29,7 @@ public class DragonController : MonoBehaviour {
 
 		if (counter >= Range && counter < Range+100) {
 			this.anim.SetBool ("fire", true);
-			if (counter== Range+65){
+			if (counter == Range+50){
 				Instantiate (fireball, fireSpawn.position, fireSpawn.rotation);
 				//GetComponet<AudioSource>.Play();
 			}
