@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Coin.cs" />
      <Compile Include="Assets\Scripts\DeathTrigger.cs" />
+     <Compile Include="Assets\Scripts\DragonController.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\EnemyController1.cs" />
      <Compile Include="Assets\Scripts\ExitPointController.cs" />

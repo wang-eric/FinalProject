@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8aea4a1ba16142c40a43bc2416b1153b
-timeCreated: 1449191734
+timeCreated: 1449360108
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -84,7 +84,7 @@ TextureImporter:
     21300154: tiles_77
     21300156: tiles_78
     21300158: tiles_79
-    21300160: tiles_80
+    21300160: brick_grey_01
     21300162: tiles_81
     21300164: tiles_82
     21300166: tiles_83
@@ -128,7 +128,7 @@ TextureImporter:
     21300242: tiles_121
     21300244: tiles_122
     21300246: tiles_123
-    21300248: tiles_124
+    21300248: flag_01
     21300250: tiles_125
     21300252: tiles_126
     21300254: tiles_127
@@ -151,7 +151,7 @@ TextureImporter:
     21300288: tiles_144
     21300290: tiles_145
     21300292: tiles_146
-    21300294: tiles_147
+    21300294: flag_02
     21300296: tiles_148
     21300298: tiles_149
     21300300: tiles_150
@@ -239,11 +239,11 @@ TextureImporter:
     21300464: tiles_232
     21300466: tiles_233
     21300468: tiles_234
-    21300470: tiles_235
-    21300472: tiles_236
-    21300474: tiles_237
-    21300476: tiles_238
-    21300478: tiles_239
+    21300470: lava_01
+    21300472: lava_02
+    21300474: lava_03
+    21300476: lava_04
+    21300478: lava_05
     21300480: tiles_240
     21300482: tiles_241
     21300484: tiles_242
@@ -325,9 +325,9 @@ TextureImporter:
     21300636: tiles_318
     21300638: tiles_319
     21300640: tiles_320
-    21300642: tiles_321
-    21300644: tiles_322
-    21300646: tiles_323
+    21300642: red_tile_01
+    21300644: red_tile_02
+    21300646: red_tile_03
     21300648: tiles_324
     21300650: tiles_325
     21300652: tiles_326
@@ -494,7 +494,7 @@ TextureImporter:
     21300974: tiles_487
     21300976: tiles_488
     21300978: tiles_489
-    21300980: tiles_490
+    21300980: chest_03
     21300982: tiles_491
     21300984: flower_01
     21300986: flower_02
@@ -520,7 +520,7 @@ TextureImporter:
     21301026: tiles_513
     21301028: tiles_514
     21301030: tiles_515
-    21301032: tiles_516
+    21301032: chest_02
     21301034: tiles_517
     21301036: tiles_518
     21301038: tiles_519
@@ -545,7 +545,7 @@ TextureImporter:
     21301076: ground
     21301078: ground_float_3
     21301080: tiles_540
-    21301082: tiles_541
+    21301082: chest_01
     21301084: tiles_542
     21301086: tiles_543
     21301088: tiles_544
@@ -1775,7 +1775,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_80
+    - name: brick_grey_01
       rect:
         serializedVersion: 2
         x: 86
@@ -2215,7 +2215,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_124
+    - name: flag_01
       rect:
         serializedVersion: 2
         x: 409
@@ -2445,7 +2445,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_147
+    - name: flag_02
       rect:
         serializedVersion: 2
         x: 375
@@ -3325,7 +3325,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_235
+    - name: lava_01
       rect:
         serializedVersion: 2
         x: 171
@@ -3335,7 +3335,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_236
+    - name: lava_02
       rect:
         serializedVersion: 2
         x: 188
@@ -3345,7 +3345,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_237
+    - name: lava_03
       rect:
         serializedVersion: 2
         x: 205
@@ -3355,7 +3355,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_238
+    - name: lava_04
       rect:
         serializedVersion: 2
         x: 222
@@ -3365,7 +3365,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_239
+    - name: lava_05
       rect:
         serializedVersion: 2
         x: 239
@@ -4185,7 +4185,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_321
+    - name: red_tile_01
       rect:
         serializedVersion: 2
         x: 358
@@ -4195,7 +4195,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_322
+    - name: red_tile_02
       rect:
         serializedVersion: 2
         x: 375
@@ -4205,7 +4205,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_323
+    - name: red_tile_03
       rect:
         serializedVersion: 2
         x: 392
@@ -5875,7 +5875,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_490
+    - name: chest_03
       rect:
         serializedVersion: 2
         x: 256
@@ -6135,7 +6135,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_516
+    - name: chest_02
       rect:
         serializedVersion: 2
         x: 273
@@ -6385,7 +6385,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tiles_541
+    - name: chest_01
       rect:
         serializedVersion: 2
         x: 273
