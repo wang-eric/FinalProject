@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour {
 		score = 0;
 		life = 5;
 		time = 5;
-		spawnPoint = new Vector3 (0.1f,-1.71f,-2f);
+		spawnPoint = new Vector3 (0.1f,-1.71f,0f);
 		UpdateScore ();
 		UpdateLife();
 		UpdateTime ();

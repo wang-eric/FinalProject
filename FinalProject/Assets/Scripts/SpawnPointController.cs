@@ -2,9 +2,7 @@
 using System.Collections;
 
 public class SpawnPointController : MonoBehaviour {
-	public float x;
-	public float y;
-	public float z;
+	public GameObject spawnposition;
 	private GameController gameController;
 	// Use this for initialization
 	void Start () {
@@ -25,7 +23,7 @@ public class SpawnPointController : MonoBehaviour {
 	// Update the spawnpoint when player walks through the spawnpoint checker
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.CompareTag ("Player")){
-			gameController.SetSpawnPoint( new Vector3 (x,y,z));
+			gameController.SetSpawnPoint(spawnposition.transform.position);
 		}
 	}
 }
