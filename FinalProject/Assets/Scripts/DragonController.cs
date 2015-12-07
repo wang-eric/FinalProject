@@ -27,14 +27,14 @@ public class DragonController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (counter >= Range && counter < Range+100) {
+		if (counter >= Range && counter < Range+80) {
 			this.anim.SetBool ("fire", true);
-			if (counter == Range+50){
+			if (counter == Range+20){
 				Instantiate (fireball, fireSpawn.position, fireSpawn.rotation);
 				//GetComponet<AudioSource>.Play();
 			}
 
-		} else if (counter == Range + 100) {
+		} else if (counter == Range + 80) {
 			this.anim.SetBool ("fire", false);
 			counter = 0;
 			this._transform.position += new Vector3(speed,0,0);

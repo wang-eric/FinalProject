@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\ExitPointController.cs" />
      <Compile Include="Assets\Scripts\FireBall.cs" />
      <Compile Include="Assets\Scripts\FireBallController.cs" />
+     <Compile Include="Assets\Scripts\FlowerController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GameOverController.cs" />
      <Compile Include="Assets\Scripts\InstructionController.cs" />

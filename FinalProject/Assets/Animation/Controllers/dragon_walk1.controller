@@ -106,7 +106,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: dragon_fire
-  m_Speed: .300000012
+  m_Speed: .600000024
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110144958}

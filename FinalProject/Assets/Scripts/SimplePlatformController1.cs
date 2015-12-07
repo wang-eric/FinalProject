@@ -67,9 +67,10 @@ public class SimplePlatformController1 : MonoBehaviour {
 	void Update () {
 		Debug.DrawLine (this.transform.position, groundEnd.position, Color.green);
 		grounded = Physics2D.Linecast (this.transform.position, groundEnd.position, 1 << LayerMask.NameToLayer ("Ground"));
+		fallOff = Physics2D.Linecast (this.transform.position, groundEnd.position, 1 << LayerMask.NameToLayer ("DeathTrigger"));
 		//grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 		screamStart = Physics2D.OverlapCircle (groundCheck.position, 1f, whatIsScreamTrigger);
-		fallOff = Physics2D.OverlapCircle (groundCheck.position, 1f, whatIsDeathTrigger);
+		//fallOff = Physics2D.OverlapCircle (groundCheck.position, 1f, whatIsDeathTrigger);
 
 		if (Input.GetButtonDown ("Jump") && grounded) {
 			jump = true;

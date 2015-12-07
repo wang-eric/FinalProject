@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: db931883da8de054da627d01b2966c1d
-timeCreated: 1449423239
+timeCreated: 1449467466
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -68,12 +68,12 @@ TextureImporter:
     21300122: 6211_61
     21300124: 6211_62
     21300126: 6211_63
-    21300128: 6211_64
-    21300130: 6211_65
-    21300132: 6211_66
-    21300134: 6211_67
-    21300136: 6211_68
-    21300138: 6211_69
+    21300128: b1
+    21300130: b2
+    21300132: b3
+    21300134: b4
+    21300136: b5
+    21300138: b6
     21300140: 6211_70
     21300142: 6211_71
     21300144: 6211_72
@@ -585,7 +585,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -602,7 +602,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 16
   alphaIsTransparency: 1
-  textureType: 8
+  textureType: 5
   buildTargetSettings: []
   spriteSheet:
     sprites:
@@ -896,61 +896,61 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 6211_64
+    - name: b1
       rect:
         serializedVersion: 2
         x: 180
-        y: 458
+        y: 457
         width: 16
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 6211_65
+    - name: b2
       rect:
         serializedVersion: 2
         x: 198
-        y: 458
+        y: 457
         width: 16
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 6211_66
+    - name: b3
       rect:
         serializedVersion: 2
         x: 216
-        y: 458
+        y: 457
         width: 16
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 6211_67
+    - name: b4
       rect:
         serializedVersion: 2
         x: 234
-        y: 458
+        y: 457
         width: 16
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 6211_68
+    - name: b5
       rect:
         serializedVersion: 2
         x: 252
-        y: 458
+        y: 457
         width: 16
         height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: 6211_69
+    - name: b6
       rect:
         serializedVersion: 2
         x: 270
-        y: 458
+        y: 457
         width: 16
         height: 16
       alignment: 0
@@ -2740,7 +2740,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 296
+        y: 295
         width: 16
         height: 16
       alignment: 0
