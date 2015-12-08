@@ -35,18 +35,12 @@ public class FireBallController : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.CompareTag ("Player")){
 			GetComponent<AudioSource>().Play();
-			gameController.RemoveLife();
+
 			gameObject.GetComponent<Renderer>().enabled = false;
 			gameObject.GetComponent<CircleCollider2D>().enabled = false;
 			// Delay 1f for the destroy action to ensure the audio is played
 			Destroy (gameObject,1f);
-			if (gameController.GetLife() == 0) {
-				//Destroy(other.gameObject);
-				gameController.GameOver();
-			}
-			else{
-				gameController.RespawnTrigger();
-			}
+			gameController.TakeDamage();
 		}
 	}
 }

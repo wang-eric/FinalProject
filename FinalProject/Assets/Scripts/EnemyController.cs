@@ -87,19 +87,7 @@ public class EnemyController : MonoBehaviour {
 			}else if (hittingPlayerFront || hittingPlayerBack){
 				
 				_zombieBiteSound.Play ();
-				gameController.RemoveLife();
-				if (gameController.GetLife() == 0) {
-					//Destroy(other.gameObject);
-					gameController.GameOver();
-				}
-				else
-				{
-					gameController.RespawnTrigger();
-				}
-				/*
-				_zombieBiteSound.Play ();
-
-				*/
+				gameController.TakeDamage();
 
 			}
 		}

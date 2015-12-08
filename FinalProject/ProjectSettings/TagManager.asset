@@ -17,6 +17,7 @@ TagManager:
   - PlatformMoveHorizontal
   - BackgroundImage
   - ZombieHead
+  - Dragon
   layers:
   - Default
   - TransparentFX

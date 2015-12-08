@@ -8,8 +8,11 @@ public class SimplePlatformController : MonoBehaviour {
 
 	public float moveForce = 365f;
 	public float maxSpeed = 5f;
-	public float jumpForce = 1000f;
+	public float jumpForce = 700f;
 	public Transform groundCheck;
+
+	public Transform groundEnd;
+
 
 	private bool grounded = false;
 	private bool fallOff = false;
@@ -62,9 +65,12 @@ public class SimplePlatformController : MonoBehaviour {
 
 
 	void Update () {
-		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
+		Debug.DrawLine (this.transform.position, groundEnd.position, Color.green);
+		grounded = Physics2D.Linecast (this.transform.position, groundEnd.position, 1 << LayerMask.NameToLayer ("Ground"));
+		fallOff = Physics2D.Linecast (this.transform.position, groundEnd.position, 1 << LayerMask.NameToLayer ("DeathTrigger"));
+		//grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 		screamStart = Physics2D.OverlapCircle (groundCheck.position, 1f, whatIsScreamTrigger);
-		fallOff = Physics2D.OverlapCircle (groundCheck.position, 1f, whatIsDeathTrigger);
+		//fallOff = Physics2D.OverlapCircle (groundCheck.position, 1f, whatIsDeathTrigger);
 
 		if (Input.GetButtonDown ("Jump") && grounded) {
 			jump = true;
@@ -76,15 +82,7 @@ public class SimplePlatformController : MonoBehaviour {
 		// When the player fall off the edge, life -1, respawn the player at the last checkpoint, 
 		// or end the game when the player runs out of life.
 		if (fallOff) {
-			gameController.RemoveLife ();
-			if (gameController.GetLife () == 0) {
-				//Destroy(other.gameObject);
-				gameController.GameOver();
-			} else {
-				gameController.RespawnTrigger ();
-				transform.position = gameController.GetSpawnPoint();
-				gameController.RespawnTrigger();
-			}
+			gameController.TakeDamage ();
 		}
 	}
 
@@ -124,11 +122,12 @@ public class SimplePlatformController : MonoBehaviour {
 			// Play jump animation
 			anim.SetInteger ("AnimState", 2);
 		}
+		/*
 		if (gameController.respawn) {
 			// Check if the player needs to be respawned (after getting hit by zombie.
 			transform.position = gameController.GetSpawnPoint();
 			gameController.RespawnTrigger();
-		}
+		}*/
 	}
 
 	// Flips the player sprite

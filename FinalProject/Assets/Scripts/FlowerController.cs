@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class FlowerController : MonoBehaviour {
@@ -29,14 +29,7 @@ public class FlowerController : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.CompareTag ("Player")){
 			GetComponent<AudioSource>().Play();
-			gameController.RemoveLife();
-			if (gameController.GetLife() == 0) {
-				//Destroy(other.gameObject);
-				gameController.GameOver();
-			}
-			else{
-				gameController.RespawnTrigger();
-			}
+			gameController.TakeDamage();
 		}
 	}
 }

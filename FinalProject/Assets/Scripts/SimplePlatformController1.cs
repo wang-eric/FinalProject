@@ -82,7 +82,7 @@ public class SimplePlatformController1 : MonoBehaviour {
 		// When the player fall off the edge, life -1, respawn the player at the last checkpoint, 
 		// or end the game when the player runs out of life.
 		if (fallOff) {
-			gameController.RemoveLife ();
+			gameController.TakeDamage ();
 			if (gameController.GetLife () == 0) {
 				//Destroy(other.gameObject);
 				gameController.GameOver();

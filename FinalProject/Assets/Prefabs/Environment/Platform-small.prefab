@@ -8,7 +8,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 436448}
-  - 114: {fileID: 11432544}
   - 68: {fileID: 6835762}
   m_Layer: 0
   m_Name: Platform-small
@@ -87,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.1000004, y: 4.96451616, z: 0}
+  m_LocalPosition: {x: 163, y: -7.96548414, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 487898}
@@ -170,22 +169,8 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: -1.29268646, y: .498767853}
-  - {x: 1.25705719, y: .507674217}
---- !u!114 &11432544
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c44e4f951555ab4bb86f74ce3a1c191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: .0250000004
-  moveRight: 1
-  moveRange: 130
+  - {x: -1.34664917, y: .508576393}
+  - {x: 1.348526, y: .507674217}
 --- !u!212 &21201630
 SpriteRenderer:
   m_ObjectHideFlags: 1

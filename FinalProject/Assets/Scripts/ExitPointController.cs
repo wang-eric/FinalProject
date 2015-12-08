@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ExitPointController : MonoBehaviour {
 	private GameController gameController;
+	public string nextScene;
 	// Use this for initialization
 	void Start () {
 		GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
@@ -22,7 +23,7 @@ public class ExitPointController : MonoBehaviour {
 	// Destroy the coin if hit by player.
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.CompareTag ("Player")){
-			gameController.Win();
+			gameController.Win(nextScene);
 		}
 	}
 }

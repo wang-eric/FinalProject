@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System;
@@ -19,6 +19,12 @@ public class GameController : MonoBehaviour {
 	private int life;
 	private float time;
 
+	private GameObject player;
+	private GameObject dragon;
+
+	private Transform player_trans;
+	private Transform dragon_trans;
+
 	private Vector3 spawnPoint;
 	public bool respawn;
 	
@@ -30,12 +36,18 @@ public class GameController : MonoBehaviour {
 		//gameOverText.text = "";
 		respawn = false;
 		score = 0;
-		life = 5;
-		time = 5;
+		life = 1000;
+		time = 200;
 		spawnPoint = new Vector3 (0.1f,-1.71f,0f);
 		UpdateScore ();
 		UpdateLife();
 		UpdateTime ();
+		GameObject player = GameObject.FindWithTag ("Player");
+		GameObject dragon = GameObject.FindWithTag ("Dragon");
+		player_trans = player.GetComponent<Transform> ();
+		if (dragon != null) {
+			dragon_trans = dragon.GetComponent<Transform> ();
+		}
 	}
 
 	void Update(){
@@ -79,12 +91,24 @@ public class GameController : MonoBehaviour {
 	public void RespawnTrigger(){
 		respawn = !respawn;
 	}
-	
-	public void RemoveLife()
-	{
+
+	public void Respawn(){
+		player_trans.position = GetSpawnPoint ();
+		if (dragon_trans != null) {
+			dragon_trans.position = new Vector3 (GetSpawnPoint ().x - 10f, dragon_trans.position.y, dragon_trans.position.z);
+		}
+	}
+	public void TakeDamage(){
 		life -= 1;
 		UpdateLife();
+		if (life == 0) {
+			GameOver();
+		}
+		else{
+			Respawn();
+		}
 	}
+
 	void UpdateTime()
 	{
 		if (time <= 0) {
@@ -109,9 +133,9 @@ public class GameController : MonoBehaviour {
 	}
 
 	// Load Win scene
-	public void Win()
+	public void Win(String level)
 	{
-		Application.LoadLevel ("Win1");
+		Application.LoadLevel (level);
 		win = true;
 	}
 }

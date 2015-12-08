@@ -10,11 +10,12 @@ GameObject:
   - 4: {fileID: 417244}
   - 114: {fileID: 11428274}
   - 68: {fileID: 6851524}
-  - 68: {fileID: 6889530}
   - 212: {fileID: 21282882}
-  m_Layer: 0
+  - 61: {fileID: 6145420}
+  - 251: {fileID: 25175094}
+  m_Layer: 12
   m_Name: Moving-Platform-small
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +78,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.1000004, y: 4.96451616, z: 0}
+  m_LocalPosition: {x: 17.9599991, y: 2.96000004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 454250}
@@ -127,7 +128,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195982}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 6200000, guid: f8e936f8a421e473eb602079b7263a15, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
@@ -140,54 +141,53 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175384}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 6200000, guid: f8e936f8a421e473eb602079b7263a15, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_Offset: {x: .369951248, y: 0}
+  serializedVersion: 2
+  m_Size: {x: .260096252, y: 1}
+--- !u!61 &6145420
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169238}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.98296738, y: 1}
 --- !u!61 &6183086
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172658}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 6200000, guid: f8e936f8a421e473eb602079b7263a15, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -.354270935, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: .291455925, y: 1}
 --- !u!68 &6851524
 EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169238}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 6200000, guid: 965528858cef64a6ebbf66b44918776f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: -1.29268646, y: .498767853}
-  - {x: 1.25705719, y: .507674217}
---- !u!68 &6889530
-EdgeCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169238}
-  m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 965528858cef64a6ebbf66b44918776f, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: -1.30421829, y: .509337902}
-  - {x: 1.29081535, y: .509338379}
+  - {x: -1.40805054, y: .503070593}
+  - {x: 1.445858, y: .507674217}
 --- !u!114 &11428274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,11 +196,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 169238}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c44e4f951555ab4bb86f74ce3a1c191, type: 3}
+  m_Script: {fileID: 11500000, guid: 4aa73976573af814aa8fc60a9281234e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .0250000004
-  moveRight: 1
+  moveUp: 1
   moveRange: 130
 --- !u!212 &21204782
 SpriteRenderer:
@@ -306,6 +306,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21301078, guid: 8aea4a1ba16142c40a43bc2416b1153b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!251 &25175094
+PlatformEffector2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169238}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseOneWay: 1
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
