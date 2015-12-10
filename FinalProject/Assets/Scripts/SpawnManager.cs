@@ -3,26 +3,42 @@ using System.Collections;
 
 public class SpawnManager : MonoBehaviour {
 
-	public int maxPlatforms = 20;
-	public GameObject platform;
-	public float horizontalMin = 6.5f;
-	public float horizontalMax = 14f;
-	public float verticalMin = -6f;
-	public float verticalMax = 6f;
-
-	private Vector2 originPosition;
+	public GameObject coin;
+	public GameObject diamond;
+	public GameObject fireball;
+	public Vector3 spawnValues;
+	public int hazardCount;
+	public float spawnWait;
+	public float startWait;
+	public float waveWait;
+	private GameObject item;
+	private Transform _trans;
+	private int rnd;
 
 	// Use this for initialization
 	void Start () {
-		originPosition = transform.position;
-		Spawn ();
+		_trans = transform;
+		StartCoroutine (SpawnWaves ());
 	}
 
-	void Spawn () {
-		for (int i = 0; i < maxPlatforms; i++) {
-			Vector2 randomPosition = originPosition + new Vector2 (Random.Range(horizontalMin, horizontalMax),Random.Range (verticalMin, verticalMax));
-			Instantiate (platform,randomPosition,Quaternion.identity);
-			originPosition = randomPosition;
+	IEnumerator SpawnWaves ()
+	{
+		yield return new WaitForSeconds (startWait);
+		while (true) {
+			for (int i = 0; i<hazardCount; i++) {
+				rnd = Random.Range(1,4);
+				Vector3 spawnPosition = _trans.position + new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
+				if (rnd == 1){
+					item = coin;
+				} else if(rnd == 2){
+					item = diamond;
+				} else if(rnd == 3){
+					item = fireball;
+				}
+				Instantiate (item, spawnPosition, _trans.rotation);
+				yield return new WaitForSeconds (spawnWait);
+			}
+
 		}
 	}
 }

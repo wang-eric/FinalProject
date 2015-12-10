@@ -46,11 +46,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Coin.cs" />
+     <Compile Include="Assets\Scripts\Coin_l2.cs" />
      <Compile Include="Assets\Scripts\DeathTrigger.cs" />
      <Compile Include="Assets\Scripts\DragonController.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\ExitPointController.cs" />
      <Compile Include="Assets\Scripts\FireBallController.cs" />
+     <Compile Include="Assets\Scripts\Fire_l2.cs" />
      <Compile Include="Assets\Scripts\FlowerController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GameOverController.cs" />
