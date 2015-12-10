@@ -49,24 +49,17 @@
      <Compile Include="Assets\Scripts\DeathTrigger.cs" />
      <Compile Include="Assets\Scripts\DragonController.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
-     <Compile Include="Assets\Scripts\EnemyController1.cs" />
      <Compile Include="Assets\Scripts\ExitPointController.cs" />
-     <Compile Include="Assets\Scripts\ExitPointControllerL3.cs" />
-     <Compile Include="Assets\Scripts\FireBall.cs" />
      <Compile Include="Assets\Scripts\FireBallController.cs" />
      <Compile Include="Assets\Scripts\FlowerController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
-     <Compile Include="Assets\Scripts\GameController_backup.cs" />
      <Compile Include="Assets\Scripts\GameOverController.cs" />
      <Compile Include="Assets\Scripts\InstructionController.cs" />
      <Compile Include="Assets\Scripts\MenuController.cs" />
      <Compile Include="Assets\Scripts\PlatformControllerHorizontal.cs" />
      <Compile Include="Assets\Scripts\PlatformControllerVertical.cs" />
      <Compile Include="Assets\Scripts\PlatformFall.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\SimplePlatformController.cs" />
-     <Compile Include="Assets\Scripts\SimplePlatformController1.cs" />
-     <Compile Include="Assets\Scripts\SimplePlatformController_backup.cs" />
      <Compile Include="Assets\Scripts\SpawnCoins.cs" />
      <Compile Include="Assets\Scripts\SpawnManager.cs" />
      <Compile Include="Assets\Scripts\SpawnPointController.cs" />
@@ -74,17 +67,11 @@
      <Compile Include="Assets\Scripts\WinLevel2Controller.cs" />
      <Compile Include="Assets\Scripts\WinLevel3Controller.cs" />
      <None Include="Assets\Fonts\kirbynokirakizzu.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

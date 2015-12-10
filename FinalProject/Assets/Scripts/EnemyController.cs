@@ -9,7 +9,6 @@ public class EnemyController : MonoBehaviour {
 	// PRIVATE INSTANCE VARIABLES
 	private Rigidbody2D _rigidbody2D;
 	private Transform _transform;
-	private Animator _animator;
 
 	public Transform frontCheck;
 	public float checkRadius = 0.1f;
@@ -25,7 +24,6 @@ public class EnemyController : MonoBehaviour {
 	public Transform topCheck2;
 	public Transform topCheck3;
 	public Transform backCheck1;
-	public Transform backCheck2;
 	private bool hittingPlayerFront,hittingPlayerBack;
 	private bool hittingPlayerTop;
 	private bool enemyKilled = false;
@@ -49,7 +47,6 @@ public class EnemyController : MonoBehaviour {
 		}
 		this._rigidbody2D = gameObject.GetComponent<Rigidbody2D> ();
 		this._transform = gameObject.GetComponent<Transform> ();
-		this._animator = gameObject.GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -58,8 +55,7 @@ public class EnemyController : MonoBehaviour {
 		if (!enemyKilled) {
 			hittingWall = Physics2D.OverlapCircle (frontCheck.position, checkRadius, whatIsWall);
 			hittingPlayerFront = Physics2D.OverlapCircle (frontCheck.position, checkRadius, whatIsPlayer);
-			hittingPlayerBack = (Physics2D.OverlapCircle (backCheck1.position, checkRadius, whatIsPlayer))
-				|| Physics2D.OverlapCircle (backCheck2.position, checkRadius, whatIsPlayer);
+			hittingPlayerBack = Physics2D.OverlapCircle (backCheck1.position, checkRadius, whatIsPlayer);
 			hittingPlayerTop = (Physics2D.OverlapCircle (topCheck1.position, checkRadius, whatIsPlayer))
 				|| (Physics2D.OverlapCircle (topCheck2.position, checkRadius, whatIsPlayer))
 				|| (Physics2D.OverlapCircle (topCheck3.position, checkRadius, whatIsPlayer));

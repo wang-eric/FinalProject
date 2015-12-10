@@ -3,8 +3,6 @@ using System.Collections;
 
 public class FlowerController : MonoBehaviour {
 	// PRIVATE INSTANCE VARIABLES
-	private Rigidbody2D _rigidbody2D;
-	private Transform _transform;
 
 	private GameController gameController;
 	
@@ -17,8 +15,6 @@ public class FlowerController : MonoBehaviour {
 		if (gameController == null) {
 			Debug.Log ("Cannot find 'GameController' script");
 		}
-		this._rigidbody2D = gameObject.GetComponent<Rigidbody2D> ();
-		this._transform = gameObject.GetComponent<Transform> ();
 	}
 	
 	// Update is called once per frame

@@ -10,14 +10,12 @@ public class GameController : MonoBehaviour {
 	public Text lifeText;
 	public Text timerText;
 
-	//public GUIText gameOverText;
-	
-	private bool gameOver;
+	public bool level1;
+
 	private bool win;
-	//private bool restart;
 	private int score;
 	private int life;
-	private float time;
+	public float time;
 
 	private GameObject player;
 	private GameObject dragon;
@@ -26,18 +24,14 @@ public class GameController : MonoBehaviour {
 	private Transform dragon_trans;
 
 	private Vector3 spawnPoint;
-	public bool respawn;
 	
 	void Start ()
 	{
-		gameOver = false;
-		//restart = false;
-		//restartText.text = "";
-		//gameOverText.text = "";
-		respawn = false;
-		score = 0;
-		life = 1000;
-		time = 200;
+		if (level1) {
+			resetScore();
+		}
+		score = PlayerPrefs.GetInt("currentGameScore");
+		life = PlayerPrefs.GetInt("currentLife");
 		spawnPoint = new Vector3 (0.1f,-1.71f,0f);
 		UpdateScore ();
 		UpdateLife();
@@ -73,10 +67,11 @@ public class GameController : MonoBehaviour {
 		return life;
 	}
 
-	public double GetTime()
+	public float GetTime()
 	{
 		return time;
 	}
+
 
 	public Vector3 GetSpawnPoint()
 	{
@@ -86,10 +81,6 @@ public class GameController : MonoBehaviour {
 	public void SetSpawnPoint(Vector3 newSpawnPoint)
 	{
 		spawnPoint = newSpawnPoint;
-	}
-
-	public void RespawnTrigger(){
-		respawn = !respawn;
 	}
 
 	public void Respawn(){
@@ -113,7 +104,6 @@ public class GameController : MonoBehaviour {
 	{
 		if (time <= 0) {
 			time = 0;
-			//Time.timeScale = 0;
 		} else {
 			time -= Time.deltaTime;
 		}
@@ -123,19 +113,37 @@ public class GameController : MonoBehaviour {
 	void UpdateLife()
 	{
 		lifeText.text = "Life: " + life;
+		PlayerPrefs.SetInt("currentLife",life);
+		PlayerPrefs.Save();
 	}
 
 	//Load Lose scene
 	public void GameOver()
 	{
 		Application.LoadLevel ("Lose");
-		gameOver = true;
 	}
 
 	// Load Win scene
-	public void Win(String level)
+	public void Win(int level)
 	{
-		Application.LoadLevel (level);
-		win = true;
+		if (level == 1) {
+			PlayerPrefs.SetInt("currentGameScore",score+life*100+(int)time*3);
+			PlayerPrefs.Save();
+			Application.LoadLevel ("Win1");
+		} else if (level == 2) {
+			PlayerPrefs.SetInt("currentGameScore",score+life*125);
+			PlayerPrefs.Save();
+			Application.LoadLevel ("Win2");
+		} else if (level == 3) {
+			PlayerPrefs.SetInt("currentGameScore",score+life*150+(int)time*10);
+			PlayerPrefs.Save();
+			Application.LoadLevel ("Win3");
+		}
+	}
+	public void resetScore()
+	{
+		PlayerPrefs.SetInt("currentGameScore",0);
+		PlayerPrefs.SetInt("currentLife",5);
+		PlayerPrefs.Save();
 	}
 }

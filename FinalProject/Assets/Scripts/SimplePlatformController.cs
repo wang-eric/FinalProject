@@ -9,22 +9,15 @@ public class SimplePlatformController : MonoBehaviour {
 	public float moveForce = 365f;
 	public float maxSpeed = 5f;
 	public float jumpForce = 700f;
-	public Transform groundCheck;
-
 	public Transform groundEnd;
 
 
 	private bool grounded = false;
 	private bool fallOff = false;
 	private bool screamStart = false;
-	private float groundRadius = 0.5f;
-	public LayerMask whatIsGround;
-	public LayerMask whatIsDeathTrigger;
-	public LayerMask whatIsScreamTrigger;
 	private Animator anim;
 	private Rigidbody2D rb2d;
 	private AudioSource[] _audioSources;
-	private AudioSource _coinSound;
 	private AudioSource _jumpSound;
 	private AudioSource _walkSound;
 	private AudioSource _screamSound;
@@ -37,30 +30,15 @@ public class SimplePlatformController : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
 		this._audioSources = gameObject.GetComponents<AudioSource> ();
-		this._coinSound = this._audioSources[0];
-		this._jumpSound = this._audioSources [1];
-		this._walkSound = this._audioSources [2];
-		this._screamSound = this._audioSources [3];
+		this._jumpSound = this._audioSources [0];
+		this._walkSound = this._audioSources [1];
+		this._screamSound = this._audioSources [2];
 		GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
 		if (gameControllerObject != null) {
 			gameController = gameControllerObject.GetComponent <GameController>();
 		}
 	}
-	
-	// Update is called once per frame
 
-	/*
-	void OnTriggerEnter2D(Collision2D otherCollider) {
-		/*
-		if (otherCollider.gameObject.CompareTag ("Platform")) {
-			grounded = true;
-
-		if (otherCollider.gameObject.CompareTag ("Coin")){
-			this._coinSound.Play();
-		}
-
-	}
-*/
 
 
 
@@ -68,9 +46,7 @@ public class SimplePlatformController : MonoBehaviour {
 		Debug.DrawLine (this.transform.position, groundEnd.position, Color.green);
 		grounded = Physics2D.Linecast (this.transform.position, groundEnd.position, 1 << LayerMask.NameToLayer ("Ground"));
 		fallOff = Physics2D.Linecast (this.transform.position, groundEnd.position, 1 << LayerMask.NameToLayer ("DeathTrigger"));
-		//grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
-		screamStart = Physics2D.OverlapCircle (groundCheck.position, 1f, whatIsScreamTrigger);
-		//fallOff = Physics2D.OverlapCircle (groundCheck.position, 1f, whatIsDeathTrigger);
+		screamStart = Physics2D.Linecast (this.transform.position, groundEnd.position, 1 << LayerMask.NameToLayer ("ScreamTrigger"));
 
 		if (Input.GetButtonDown ("Jump") && grounded) {
 			jump = true;
@@ -122,12 +98,6 @@ public class SimplePlatformController : MonoBehaviour {
 			// Play jump animation
 			anim.SetInteger ("AnimState", 2);
 		}
-		/*
-		if (gameController.respawn) {
-			// Check if the player needs to be respawned (after getting hit by zombie.
-			transform.position = gameController.GetSpawnPoint();
-			gameController.RespawnTrigger();
-		}*/
 	}
 
 	// Flips the player sprite
