@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class Coin_l2 : MonoBehaviour {
-	
+	public int score;
 	private GameController gameController;
 
 	private CircleCollider2D[] colliders;
@@ -30,7 +30,7 @@ public class Coin_l2 : MonoBehaviour {
 	// Destroy the coin if hit by player.
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.CompareTag ("Player")) {
-			gameController.AddScore (10);
+			gameController.AddScore (score);
 
 			gameObject.GetComponent<Renderer> ().enabled = false;
 			this.inner.enabled = false;
