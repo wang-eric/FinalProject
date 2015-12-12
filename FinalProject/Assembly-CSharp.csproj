@@ -68,6 +68,11 @@
      <Compile Include="Assets\Scripts\WinLevel1Controller.cs" />
      <Compile Include="Assets\Scripts\WinLevel2Controller.cs" />
      <Compile Include="Assets\Scripts\WinLevel3Controller.cs" />
+     <None Include="Assets\Fonts\Carter One\OFL.txt" />
+     <None Include="Assets\Sprites\_UI\Mobile Game GUI\License.txt" />
+     <None Include="Assets\Fonts\AveriaSnasLibre\OFL.txt" />
+     <None Include="Assets\Fonts\Skranji\OFL.txt" />
+     <None Include="Assets\Sprites\_UI\Mobile Game GUI\Fonts.txt" />
      <None Include="Assets\Fonts\kirbynokirakizzu.txt" />
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>

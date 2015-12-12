@@ -1,0 +1,238 @@
+fileFormatVersion: 2
+guid: 13e1b82091b3541428777b20e26aaf1f
+timeCreated: 1449891265
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Level1Clear
+    21300002: Level2Clear
+    21300004: Level3Clear
+    21300006: GameOver
+    21300008: btn_continue
+    21300010: btn_instruction
+    21300012: btn_red
+    21300014: ScoreUI
+    21300016: btn_playAgain
+    21300018: btn_start
+    21300020: LifeUI
+    21300022: TimeUI
+    21300024: btn_hard
+    21300026: Instruction
+    21300028: btn_back
+    21300030: Mobile Game GUI Modified_14
+    21300032: Mobile Game GUI Modified_15
+    21300034: Mobile Game GUI Modified_16
+    21300036: Mobile Game GUI Modified_17
+    21300038: Mobile Game GUI Modified_18
+    21300040: Mobile Game GUI Modified_19
+    21300042: Mobile Game GUI Modified_20
+    21300044: Mobile Game GUI Modified_21
+    21300046: Mobile Game GUI Modified_22
+    21300048: Mobile Game GUI Modified_23
+    21300050: Mobile Game GUI Modified_24
+    21300052: Mobile Game GUI Modified_25
+    21300054: Mobile Game GUI Modified_26
+    21300056: Mobile Game GUI Modified_27
+    21300058: Mobile Game GUI Modified_28
+    21300060: Mobile Game GUI Modified_29
+    21300062: Mobile Game GUI Modified_30
+    21300064: Mobile Game GUI Modified_31
+    21300066: Mobile Game GUI Modified_32
+    21300068: Mobile Game GUI Modified_33
+    21300070: Mobile Game GUI Modified_34
+    21300072: Mobile Game GUI Modified_35
+    21300074: Mobile Game GUI Modified_36
+    21300076: Mobile Game GUI Modified_37
+    21300078: Mobile Game GUI Modified_38
+    21300080: Mobile Game GUI Modified_39
+    21300082: Mobile Game GUI Modified_40
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Level1Clear
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 741
+        width: 481
+        height: 526
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Level2Clear
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 750
+        width: 481
+        height: 526
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Level3Clear
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 750
+        width: 481
+        height: 526
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GameOver
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 750
+        width: 481
+        height: 526
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btn_continue
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 626
+        width: 211
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btn_instruction
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 616
+        width: 239
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btn_hard
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 621
+        width: 212
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ScoreUI
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 670
+        width: 198
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btn_playAgain
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 535
+        width: 212
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btn_start
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 522
+        width: 234
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: LifeUI
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 581
+        width: 193
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TimeUI
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 505
+        width: 190
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Instruction
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 98
+        width: 608
+        height: 480
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btn_back
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 388
+        width: 261
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

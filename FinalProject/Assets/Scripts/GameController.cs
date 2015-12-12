@@ -56,7 +56,7 @@ public class GameController : MonoBehaviour {
 	
 	void UpdateScore()
 	{
-		scoreText.text = "Score: " + score;
+		scoreText.text = score.ToString("0");
 		// currentGameScore is declared and can be passed across scenes
 		PlayerPrefs.SetInt("currentGameScore",score);
 		PlayerPrefs.Save();
@@ -107,12 +107,12 @@ public class GameController : MonoBehaviour {
 		} else {
 			time -= Time.deltaTime;
 		}
-		timerText.text = "Time: " + time.ToString("0");
+		timerText.text = time.ToString("0");
 	}
 
 	void UpdateLife()
 	{
-		lifeText.text = "Life: " + life;
+		lifeText.text =life.ToString("0");
 		PlayerPrefs.SetInt("currentLife",life);
 		PlayerPrefs.Save();
 	}
