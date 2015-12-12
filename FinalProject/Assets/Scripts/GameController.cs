@@ -10,8 +10,6 @@ public class GameController : MonoBehaviour {
 	public Text lifeText;
 	public Text timerText;
 
-	public bool level1;
-
 	private bool win;
 	private int score;
 	private int life;
@@ -27,9 +25,6 @@ public class GameController : MonoBehaviour {
 	
 	void Start ()
 	{
-		if (level1) {
-			resetScore();
-		}
 		score = PlayerPrefs.GetInt("currentGameScore");
 		life = PlayerPrefs.GetInt("currentLife");
 		spawnPoint = new Vector3 (0.1f,-1.71f,0f);
@@ -139,11 +134,5 @@ public class GameController : MonoBehaviour {
 			PlayerPrefs.Save();
 			Application.LoadLevel ("Win3");
 		}
-	}
-	public void resetScore()
-	{
-		PlayerPrefs.SetInt("currentGameScore",0);
-		PlayerPrefs.SetInt("currentLife",5);
-		PlayerPrefs.Save();
 	}
 }

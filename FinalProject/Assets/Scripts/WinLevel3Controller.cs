@@ -22,6 +22,6 @@ public class WinLevel3Controller : MonoBehaviour {
 
 	// Restart Button Event Handler
 	public void OnRestartButtonClick() {
-		Application.LoadLevel ("Level1");
+		Application.LoadLevel ("Start");
 	}
 }
