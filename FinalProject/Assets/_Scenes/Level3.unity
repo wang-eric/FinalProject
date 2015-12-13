@@ -2024,12 +2024,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 98681413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aa73976573af814aa8fc60a9281234e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bcc481d45b918146ad1bb174f06070a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .0299999993
-  moveUp: 1
-  moveRange: 130
+  speed: 2
+  timer: 0
+  timimg: 2
+--- !u!50 &98681419
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 98681413}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1 &99196281
 GameObject:
   m_ObjectHideFlags: 0
@@ -12672,12 +12688,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 606231925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aa73976573af814aa8fc60a9281234e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bcc481d45b918146ad1bb174f06070a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .0500000007
-  moveUp: 1
-  moveRange: 140
+  speed: 2.5
+  timer: 0
+  timimg: 3
+--- !u!50 &606231931
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 606231925}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1 &606728824
 GameObject:
   m_ObjectHideFlags: 0
@@ -19540,12 +19572,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 921820891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aa73976573af814aa8fc60a9281234e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bcc481d45b918146ad1bb174f06070a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .0500000007
-  moveUp: 1
-  moveRange: 140
+  speed: 2.5
+  timer: 0
+  timimg: 3
+--- !u!50 &921820897
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 921820891}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1 &922392714
 GameObject:
   m_ObjectHideFlags: 0
@@ -39945,12 +39993,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1929735677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aa73976573af814aa8fc60a9281234e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bcc481d45b918146ad1bb174f06070a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .0500000007
-  moveUp: 0
-  moveRange: 140
+  speed: -2.5
+  timer: 0
+  timimg: 3
+--- !u!50 &1929735683
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929735677}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!4 &1931334239 stripped
 Transform:
   m_PrefabParentObject: {fileID: 466468, guid: c4441776a222c574b9693495a278e6f2, type: 2}
@@ -40348,12 +40412,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1947094182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aa73976573af814aa8fc60a9281234e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bcc481d45b918146ad1bb174f06070a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .0500000007
-  moveUp: 0
-  moveRange: 140
+  speed: -2.5
+  timer: 0
+  timimg: 3
+--- !u!50 &1947094188
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1947094182}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1 &1947464419
 GameObject:
   m_ObjectHideFlags: 0
