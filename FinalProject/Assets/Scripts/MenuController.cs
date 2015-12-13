@@ -33,6 +33,7 @@ public class MenuController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		// Check if any key is pressed
 		if (!cheatLifeEnabled) {
 			if (Input.anyKeyDown) {
@@ -113,6 +114,9 @@ public class MenuController : MonoBehaviour {
 	public void OnInstructionButtonClick() {
 		Application.LoadLevel ("Instruction");
 	}
+	public void OnQuitButtonClick() {
+		Application.Quit();
+	}
 
 	public void OnLevel1ButtonClick() {
 		_levelSelectSound.Play ();
@@ -126,4 +130,12 @@ public class MenuController : MonoBehaviour {
 		_levelSelectSound.Play ();
 		level = "Level3";
 	}
+	public void OnCloseButtonClick() {
+		audioPlayed_level = false;
+		index_level = 0;  
+		cheatLevelEnabled = false; 
+		gary.SetActive(false);
+		//Update ();
+	}
+
 }
