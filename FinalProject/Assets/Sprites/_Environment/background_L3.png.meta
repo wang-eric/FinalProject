@@ -1,10 +1,11 @@
 fileFormatVersion: 2
 guid: 3d89d92654aa7074aa61fbd19a765686
-timeCreated: 1449702605
+timeCreated: 1450041676
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: background_L3_0
+    21300002: background_L2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -58,6 +59,16 @@ TextureImporter:
         y: 42
         width: 256
         height: 189
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: background_L2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 554
+        width: 128
+        height: 433
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

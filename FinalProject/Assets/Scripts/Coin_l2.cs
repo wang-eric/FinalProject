@@ -42,7 +42,7 @@ public class Coin_l2 : MonoBehaviour {
 	}
 	void OnTriggerStay2D (Collider2D other){
 		if (other.gameObject.CompareTag ("Platform")){
-			Destroy (gameObject,3f);
+			Destroy (gameObject,2f);
 		}
 	}
 }

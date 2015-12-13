@@ -12416,7 +12416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &591205878
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26034,7 +26034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60b78b7069d6bf40aea202626fe5663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 591205877}
 --- !u!1 &1262209151
 GameObject:
   m_ObjectHideFlags: 0
