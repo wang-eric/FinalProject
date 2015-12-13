@@ -55,8 +55,6 @@ public class SimplePlatformController : MonoBehaviour {
 		if (screamStart && !this._screamSound.isPlaying) {
 			this._screamSound.Play ();
 		}
-		// When the player fall off the edge, life -1, respawn the player at the last checkpoint, 
-		// or end the game when the player runs out of life.
 		if (fallOff) {
 			gameController.TakeDamage ();
 		}

@@ -18,6 +18,7 @@ TagManager:
   - BackgroundImage
   - ZombieHead
   - Dragon
+  - LevelSelect
   layers:
   - Default
   - TransparentFX

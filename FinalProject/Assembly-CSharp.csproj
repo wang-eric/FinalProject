@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\GameOverController.cs" />
      <Compile Include="Assets\Scripts\InstructionController.cs" />
      <Compile Include="Assets\Scripts\MenuController.cs" />
+     <Compile Include="Assets\Scripts\PauseController.cs" />
      <Compile Include="Assets\Scripts\PlatformControllerHorizontal.cs" />
      <Compile Include="Assets\Scripts\PlatformControllerVertical.cs" />
      <Compile Include="Assets\Scripts\PlatformFall.cs" />
