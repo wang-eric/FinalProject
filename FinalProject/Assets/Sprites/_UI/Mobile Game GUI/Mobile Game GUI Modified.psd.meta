@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 13e1b82091b3541428777b20e26aaf1f
-timeCreated: 1450034508
+timeCreated: 1450073385
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -46,6 +46,7 @@ TextureImporter:
     21300078: Mobile Game GUI Modified_38
     21300080: Mobile Game GUI Modified_39
     21300082: Mobile Game GUI Modified_40
+    21300084: btn_controls
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -228,6 +229,16 @@ TextureImporter:
         x: 170
         y: 388
         width: 261
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btn_controls
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 524
+        width: 239
         height: 78
       alignment: 0
       pivot: {x: .5, y: .5}

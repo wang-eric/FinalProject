@@ -14,9 +14,8 @@ public class MenuController : MonoBehaviour {
 	private AudioSource _cheatLevelEnabledSound;
 	private AudioSource _levelSelectSound;
 	public GameObject gary;
-	public GameObject btn1;
-	public GameObject btn2;
-	public GameObject btn3;
+	public GameObject startScreen;
+	public GameObject controlsScreen;
 	// Use this for initialization
 	void Start () {
 		this._audioSources = gameObject.GetComponents<AudioSource> ();
@@ -111,8 +110,13 @@ public class MenuController : MonoBehaviour {
 	}
 
 	// Instruction Button Event Handler
-	public void OnInstructionButtonClick() {
-		Application.LoadLevel ("Instruction");
+	public void OnControlsButtonClick() {
+		controlsScreen.SetActive(true);
+		startScreen.SetActive(false);
+	}
+	public void OnBackToMenuButtonClick() {
+		controlsScreen.SetActive(false);
+		startScreen.SetActive(true);
 	}
 	public void OnQuitButtonClick() {
 		Application.Quit();

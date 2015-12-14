@@ -4,6 +4,7 @@ using System.Collections;
 public class PauseController : MonoBehaviour {
 	private bool isPaused = false;
 	public GameObject pauseMenu;
+	public GameObject instructionPanel;
 	// Use this for initialization
 	void Start () {
 	
@@ -30,5 +31,13 @@ public class PauseController : MonoBehaviour {
 		Time.timeScale = 1;
 		isPaused = false;
 		Application.LoadLevel ("Start");
+	}
+	public void OnInstructionButtonClick() {
+		instructionPanel.SetActive(true);
+		pauseMenu.SetActive(false);
+	}
+	public void OnBackButtonClick() {
+		instructionPanel.SetActive(false);
+		pauseMenu.SetActive(true);
 	}
 }

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f08f1eae3bae79341ac50d9545c9c197
-timeCreated: 1450037379
+timeCreated: 1450071312
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,6 +14,8 @@ TextureImporter:
     21300014: Menu
     21300016: Check
     21300018: Close
+    21300020: Menu
+    21300022: Info
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -64,7 +66,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 47
-        y: 499
+        y: 479
         width: 391
         height: 177
       alignment: 0
@@ -74,7 +76,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 47
-        y: 261
+        y: 240
         width: 444
         height: 221
       alignment: 0
@@ -84,7 +86,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 54
-        y: 153
+        y: 133
         width: 69
         height: 70
       alignment: 0
@@ -94,7 +96,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 171
-        y: 158
+        y: 138
         width: 69
         height: 70
       alignment: 0
@@ -104,7 +106,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 280
-        y: 161
+        y: 141
         width: 69
         height: 70
       alignment: 0
@@ -114,7 +116,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 406
-        y: 160
+        y: 140
         width: 33
         height: 34
       alignment: 0
@@ -124,7 +126,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 69
-        y: 56
+        y: 36
         width: 69
         height: 71
       alignment: 0
@@ -134,7 +136,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 170
-        y: 56
+        y: 36
         width: 69
         height: 71
       alignment: 0
@@ -144,7 +146,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 276
-        y: 56
+        y: 36
         width: 69
         height: 71
       alignment: 0
@@ -154,9 +156,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 388
-        y: 77
+        y: 57
         width: 43
         height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Info
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 35
+        width: 69
+        height: 71
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
