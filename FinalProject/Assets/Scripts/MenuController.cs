@@ -113,10 +113,20 @@ public class MenuController : MonoBehaviour {
 	public void OnControlsButtonClick() {
 		controlsScreen.SetActive(true);
 		startScreen.SetActive(false);
+		cheatLevelEnabled = true;
+		gary.SetActive(false);
 	}
 	public void OnBackToMenuButtonClick() {
 		controlsScreen.SetActive(false);
 		startScreen.SetActive(true);
+
+		if (index_level == cheatCode_level.Length) {
+			gary.SetActive (true);
+		} else {
+			cheatLevelEnabled = false;
+			index_level = 0;
+			gary.SetActive (false);
+		}
 	}
 	public void OnQuitButtonClick() {
 		Application.Quit();
