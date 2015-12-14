@@ -22257,7 +22257,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 3 Obejectives
+  m_Text: Level 3 Objectives
 --- !u!222 &1055278931
 CanvasRenderer:
   m_ObjectHideFlags: 0
