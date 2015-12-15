@@ -1,11 +1,17 @@
 fileFormatVersion: 2
 guid: 7231a03086969a947a0d6593391a9940
-timeCreated: 1450071241
+timeCreated: 1450161662
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Instruction
     21300002: Back
+    21300004: Ribbon_Instruction
+    21300006: Ribbon_Level1
+    21300008: Ribbon_Level2
+    21300010: Ribbon_Level3
+    21300012: Panel_Small
+    21300014: Panel_Large
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -52,13 +58,23 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Instruction
+    - name: Ribbon_Instruction
       rect:
         serializedVersion: 2
-        x: 47
-        y: 412
-        width: 391
-        height: 177
+        x: 135
+        y: 888
+        width: 207
+        height: 59
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ribbon_Level1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 801
+        width: 207
+        height: 59
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -66,9 +82,49 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 471
-        y: 448
+        y: 806
         width: 68
         height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ribbon_Level2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 703
+        width: 207
+        height: 59
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ribbon_Level3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 604
+        width: 207
+        height: 59
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Panel_Small
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 407
+        width: 391
+        height: 147
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Panel_Large
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 9
+        width: 635
+        height: 381
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
