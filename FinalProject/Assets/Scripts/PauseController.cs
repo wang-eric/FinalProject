@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/* PauseController.cs
+ * Created by: Eric Wang
+ * Date Created: December 12th, 2015
+ * Date Modified: December 15th, 2015
+ * Description: This script is used to control the button behaviour on in-game pause menu.
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class PauseController : MonoBehaviour {

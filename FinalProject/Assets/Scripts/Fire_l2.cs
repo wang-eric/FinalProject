@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/* Fire_l2.cs
+ * Created by: Eric Wang
+ * Date Created: December 1st, 2015
+ * Date Modified: December 11th, 2015
+ * Description: This script is used to control the movement of the fireball in level 2
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class Fire_l2 : MonoBehaviour {

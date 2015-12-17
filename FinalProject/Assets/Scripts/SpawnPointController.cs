@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/* SpawnPointController.cs
+ * Created by: Eric Wang
+ * Date Created: November 25st, 2015
+ * Date Modified: December 6th, 2015
+ * Description: This script is used to control the collider of the check point.
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class SpawnPointController : MonoBehaviour {

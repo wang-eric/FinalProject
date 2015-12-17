@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/* EnemyController.cs
+ * Created by: Eric Wang
+ * Date Created: November 1st, 2015
+ * Date Modified: December 5th, 2015
+ * Description: This script is used to control the zombies in level 1.
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class EnemyController : MonoBehaviour {
@@ -53,21 +60,26 @@ public class EnemyController : MonoBehaviour {
 	void Update () {
 		// check if enemy is grounded
 		if (!enemyKilled) {
+			// Check for the wall
 			hittingWall = Physics2D.OverlapCircle (frontCheck.position, checkRadius, whatIsWall);
+			// Check if the player touches the zombie from the front
 			hittingPlayerFront = Physics2D.OverlapCircle (frontCheck.position, checkRadius, whatIsPlayer);
+			// Check if the player touches the zombie from the back
 			hittingPlayerBack = Physics2D.OverlapCircle (backCheck1.position, checkRadius, whatIsPlayer);
+			// Check if the player steps on the zombie's head
 			hittingPlayerTop = (Physics2D.OverlapCircle (topCheck1.position, checkRadius, whatIsPlayer))
 				|| (Physics2D.OverlapCircle (topCheck2.position, checkRadius, whatIsPlayer))
 				|| (Physics2D.OverlapCircle (topCheck3.position, checkRadius, whatIsPlayer));
 
 			// Check for the edge
 			notAtEdge = Physics2D.OverlapCircle (edgeCheck.position, checkRadius, whatIsWall);
+
 			// Move to one direct if the zombie is not hitting a wall or near the edge
 			if (hittingWall || !notAtEdge) {
 				moveRight = !moveRight;
 			}
 
-			// Player get killed when hit by a zombie
+
 			// Kill zombies when the player jump on their heads
 			if (hittingPlayerTop) {
 				_zombieKillSound.Play ();
@@ -80,16 +92,15 @@ public class EnemyController : MonoBehaviour {
 				hittingPlayerTop=false;
 				enemyKilled = true;
 				//Destroy (this.gameObject);
-			}else if (hittingPlayerFront || hittingPlayerBack){
-				
+
+			} else if (hittingPlayerFront || hittingPlayerBack){ // Player get killed when hit by a zombie
 				_zombieBiteSound.Play ();
 				gameController.TakeDamage();
 
 			}
 		}
 
-
-
+		// Turn the zombie when it moves to a different direction
 		if (moveRight) {
 			this._transform.localScale = new Vector3(-2.8f, 2.8f, 1f); 
 			this._rigidbody2D.velocity = new Vector2 (speed, this._rigidbody2D.velocity.y);

@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+/* WinLevel1Controller.cs
+ * Created by: Eric Wang
+ * Date Created: December 1st, 2015
+ * Date Modified: December 9th, 2015
+ * Description: This script is used to control all behaviour in level 1 winning scene.
+ */
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 

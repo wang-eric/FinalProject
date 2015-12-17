@@ -55,16 +55,13 @@
      <Compile Include="Assets\Scripts\Fire_l2.cs" />
      <Compile Include="Assets\Scripts\FlowerController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
-     <Compile Include="Assets\Scripts\GameOverController.cs" />
      <Compile Include="Assets\Scripts\InstructionController.cs" />
      <Compile Include="Assets\Scripts\MenuController.cs" />
      <Compile Include="Assets\Scripts\PauseController.cs" />
      <Compile Include="Assets\Scripts\PlatformControllerHorizontal.cs" />
      <Compile Include="Assets\Scripts\PlatformControllerVertical.cs" />
      <Compile Include="Assets\Scripts\PlatformControllerVertical_v2.cs" />
-     <Compile Include="Assets\Scripts\PlatformFall.cs" />
      <Compile Include="Assets\Scripts\SimplePlatformController.cs" />
-     <Compile Include="Assets\Scripts\SpawnCoins.cs" />
      <Compile Include="Assets\Scripts\SpawnManager.cs" />
      <Compile Include="Assets\Scripts\SpawnPointController.cs" />
      <Compile Include="Assets\Scripts\WinLevel1Controller.cs" />

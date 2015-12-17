@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/* WinLevel3Controller.cs
+ * Created by: Eric Wang
+ * Date Created: December 1st, 2015
+ * Date Modified: December 9th, 2015
+ * Description: This script is used to control all behaviour in level 3 winning scene.
+ */
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -16,11 +23,12 @@ public class WinLevel3Controller : MonoBehaviour {
 
 	}
 
+	//Display the finalscore
 	private void _SetScore() {
 		this.scoreLabel.text = "Score: " + PlayerPrefs.GetInt("currentGameScore");
 	}
 
-	// Restart Button Event Handler
+	// Return to Menu Button Event Handler
 	public void OnRestartButtonClick() {
 		Application.LoadLevel ("Start");
 	}

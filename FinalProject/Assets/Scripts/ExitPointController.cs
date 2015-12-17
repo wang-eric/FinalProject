@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/* ExitPointController.cs
+ * Created by: Eric Wang
+ * Date Created: November 1st, 2015
+ * Date Modified: December 17th, 2015
+ * Description: This script is used to level exit.
+ */
+using UnityEngine;
 using System.Collections;
 
 public class ExitPointController : MonoBehaviour {
@@ -20,7 +26,7 @@ public class ExitPointController : MonoBehaviour {
 	
 	}
 
-	// Destroy the coin if hit by player.
+	// Call Win() when the player reaches the exit.
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.CompareTag ("Player")){
 			gameController.Win(currentLevel);

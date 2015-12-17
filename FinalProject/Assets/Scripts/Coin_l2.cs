@@ -1,8 +1,17 @@
+/* Coin_l2.cs
+ * Created by: Eric Wang
+ * Date Created: December 8th, 2015
+ * Date Modified: December 11th, 2015
+ * Description: This script is used to manage level 2 coins' collider events
+ */
+
 using UnityEngine;
 using System.Collections;
 
 public class Coin_l2 : MonoBehaviour {
+	// Assign points for the coin
 	public int score;
+
 	private GameController gameController;
 
 	private CircleCollider2D[] colliders;
@@ -40,6 +49,7 @@ public class Coin_l2 : MonoBehaviour {
 			Destroy (gameObject, 1f);
 		}
 	}
+	// Destroy the coin after hitting the ground for 2 seconds
 	void OnTriggerStay2D (Collider2D other){
 		if (other.gameObject.CompareTag ("Platform")){
 			Destroy (gameObject,2f);

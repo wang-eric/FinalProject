@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/* FireBallController.cs
+ * Created by: Eric Wang
+ * Date Created: December 1st, 2015
+ * Date Modified: December 11th, 2015
+ * Description: This script is used to control the movement of the fireball in level 3
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class FireBallController : MonoBehaviour {
@@ -23,6 +30,7 @@ public class FireBallController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		// Increase the fireball size when the fireball is just instantiated.
 		if (trans.localScale.x < 1) {
 			scale+=0.05f;
 		}

@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+/* Coin.cs
+ * Created by: Eric Wang
+ * Date Created: November 1st, 2015
+ * Date Modified: November 25th, 2015
+ * Description: This script is used to manage level 1 coins' collider events
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class Coin : MonoBehaviour {

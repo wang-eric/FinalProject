@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+﻿/* PlatformControllerVertical.cs
+ * Created by: Eric Wang
+ * Date Created: November 1st, 2015
+ * Date Modified: December 11th, 2015
+ * Description: This script is used to control vertical moving platforms in the game. 
+ * NOTE****: This control does not work with the pause function and is replaced with PlatformControllerVertical_v2.cs
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class PlatformControllerVertical : MonoBehaviour {

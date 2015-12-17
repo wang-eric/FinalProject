@@ -1,3 +1,10 @@
+/* FlowerController.cs
+ * Created by: Eric Wang
+ * Date Created: December 5th, 2015
+ * Date Modified: December 9th, 2015
+ * Description: This script is used to control the collider of zombie flower in level 3.
+ */
+
 using UnityEngine;
 using System.Collections;
 

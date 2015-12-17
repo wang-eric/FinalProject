@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/* SimplePlatFormController.cs
+ * Created by: Eric Wang
+ * Date Created: November 1st, 2015
+ * Date Modified: December 17th, 2015
+ * Description: This script is used to control the player movement.
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class SimplePlatformController : MonoBehaviour {
@@ -39,22 +46,26 @@ public class SimplePlatformController : MonoBehaviour {
 		}
 	}
 
-
-
-
+	// Update is called once per frame
 	void Update () {
 		Debug.DrawLine (this.transform.position, groundEnd.position, Color.green);
+		// Check if the player is on the ground
 		grounded = Physics2D.Linecast (this.transform.position, groundEnd.position, 1 << LayerMask.NameToLayer ("Ground"));
+		// Check if the player is on the DeathTrigger
 		fallOff = Physics2D.Linecast (this.transform.position, groundEnd.position, 1 << LayerMask.NameToLayer ("DeathTrigger"));
+		// Check if the player is on the ScreamTrigger
 		screamStart = Physics2D.Linecast (this.transform.position, groundEnd.position, 1 << LayerMask.NameToLayer ("ScreamTrigger"));
 
+		// Only jump when the jump key is pressed, and the player is on the ground
 		if (Input.GetButtonDown ("Jump") && grounded) {
 			jump = true;
 			grounded = false;
 		}
+		// Play scream sound when the player touches the scream trigger.
 		if (screamStart && !this._screamSound.isPlaying) {
 			this._screamSound.Play ();
 		}
+		// Character takes damage when the player touches the death trigger.
 		if (fallOff) {
 			gameController.TakeDamage ();
 		}
@@ -85,6 +96,7 @@ public class SimplePlatformController : MonoBehaviour {
 			Flip ();
 		else if (h<0 && facingRight)
 			Flip ();
+		// Player jump
 		if (jump){
 			// Play jump sound
 			this._jumpSound.Play();

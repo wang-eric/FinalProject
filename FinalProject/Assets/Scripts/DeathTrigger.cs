@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/* DeathTrigger.cs
+ * Created by: Eric Wang
+ * Date Created: November 1st, 2015
+ * Date Modified: December 5th, 2015
+ * Description: This script is used to control deathtrigger collider. The script is not used in the latest version of the game.
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class DeathTrigger : MonoBehaviour {

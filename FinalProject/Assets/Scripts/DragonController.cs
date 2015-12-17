@@ -1,18 +1,26 @@
-﻿using UnityEngine;
+﻿/* DragonController.cs
+ * Created by: Eric Wang
+ * Date Created: December 1st, 2015
+ * Date Modified: December 17th, 2015
+ * Description: This script is used to control all movements of the fire dragon in level 3
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class DragonController : MonoBehaviour {
 	// PUBLIC INSTANCE VARIABLES
 	private float speed = 4f;
 	public bool fire = false;
-	public int Range = 300;
+	//public int Range = 300;
 
 	public GameObject fireball;
 	public Transform fireSpawn;
 
-	private Transform _playerTransform;
+
 	private Rigidbody2D rb2d;
-	private SimplePlatformController _playerController;
+	//private Transform _playerTransform;
+	//private SimplePlatformController _playerController;
 	private Animator anim;
 
 	// PRIVATE INSTANCE VARIABLES
@@ -23,17 +31,23 @@ public class DragonController : MonoBehaviour {
 	private AudioSource _roarSound;
 	private GameController gameController;
 
+	// Each timer controls one state of the dragon.
+	// Timer1 is for the walking state
+	// TImer2 is for the firing state
+	// Timer3 is for the idle state after firing
 	private float actionTimer1 = 0.0f;
 	private float actionTimer2 = 0.0f;
 	private float actionTimer3 = 0.0f;
+	// timing1,timing2, timing3 are the length of each state.
 	private float timing1 = 3f;
 	private float timing2 = 0.3f;
 	private float timing3 = 0.8f;
+	// Timing trigger is a start trigger for each state.
+	// Each timer only starts when the previous state is complete.
 	private bool timing1trigger = true;
 	private bool timing2trigger = false;
 	private bool timing3trigger = false;
 
-	private int counter = 0;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -65,6 +79,7 @@ public class DragonController : MonoBehaviour {
 		if (timing3trigger) {
 			actionTimer3 += Time.deltaTime;
 		}
+		// Reset walk state timer and start fire state 
 		if (actionTimer1 > timing1) {
 			actionTimer1 = 0;
 			timing1trigger = false;
@@ -76,13 +91,14 @@ public class DragonController : MonoBehaviour {
 			}
 
 		}
+		// Reset fire state timer and start idle state 
 		if (actionTimer2 > timing2) {
 			actionTimer2 = 0;
 			timing2trigger = false;
 			timing3trigger = true;
 			Instantiate (fireball, fireSpawn.position, fireSpawn.rotation);
-			Debug.Log ("Fire");
 		}
+		// Reset fire state timer and start walk state 
 		if (actionTimer3 > timing3) {
 			actionTimer3 = 0;
 			timing3trigger = false;
@@ -136,7 +152,7 @@ public class DragonController : MonoBehaviour {
 		counter += 1;
 		*/
 	}
-
+	/* Early codes for dragon's movement. (Did not work with the pause function)
 	IEnumerator DragonMovement ()
 	{
 		//yield return new WaitForSeconds (startWait);
@@ -185,10 +201,11 @@ public class DragonController : MonoBehaviour {
 
 				}
 				yield return new WaitForSeconds (5f);
-			}*/
+			}
 		}
-	}
+	}*/
 
+	// Check if the dragon catches the player.
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.CompareTag ("Player")){
 			this._biteSound.Play();
